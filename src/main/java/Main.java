@@ -41,7 +41,7 @@ public class Main {
             // Make the REST API call and get the response entity.
             HttpResponse response = httpClient.execute(request);
 
-            if (response!=null && response.getEntity() != null) {
+            if (response!=null  && response.getEntity() != null && EntityUtils !=null) {
                 // Format and display the JSON response.
                 String jsonString = EntityUtils.toString(response.getEntity());
                 JSONObject json = new JSONObject(jsonString);
